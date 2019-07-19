@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        function printFibonacci(n) {
+            if (n<=1){
+                return [];
+            }
+            let arr = [1,1];
+            let i=0;
+            while (arr[i]+arr[i+1] < n){
+                let sum = arr[i] + arr[i+1];
+                arr.push(sum);
+                i++;
+            }
+            return arr;
+        }
+        let resultFibonacci = printFibonacci(1);
+        if (resultFibonacci.length === 0){
+            document.write("Số nguyên nhập vào nhỏ hơn hoặc bằng 1");
+        } else {
+            for (let i = 0; i < resultFibonacci.length; i++) {
+                document.write(resultFibonacci[i] + ' ');
+            }
+        }
+    </script>
+</body>
+</html>
